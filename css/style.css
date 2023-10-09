@@ -17,34 +17,23 @@ h1 {
 }
 
 h2 {
-  color: #451c7a;
   font-size: 1.375rem;
   margin-top: 0;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
+  margin-bottom: .5em;
 }
 
 p {
   line-height: 1.5;
 }
 
-.subheading {
-  display: block;
-  font-size: 1rem;
-  color: #d0aaff;
-}
-
-.section-two h2 {
-  color: inherit;
-}
-
 /* ----- LINKS ----- */
 
 a {
   color: #ef5839;
-  text-decoration: underline dotted; 
 }
 
 a:hover, 
@@ -52,37 +41,6 @@ a:active {
   color: #d4b44c;
 }
 
-.btn {
-  font-size: 1.125rem;
-  text-align: center;
-  font-weight: 500;
-  text-decoration: none;
-  display: block;
-  padding: 0.5em 1em;
-  margin-bottom: 1em;
-  border-radius: 4.6px;
-}
-
-.btn-dark {
-  color: whitesmoke;
-  background: #5f29a3;
-}
-
-.btn-mid {
-  color: #5f29a3; 
-  background: #f0e0ff; 
-}
-
-.btn-light {
-  color: #5f29a3; 
-  background: whitesmoke;
-}
-
-.btn:hover, 
-.btn:active {
-  color: #2b238a;
-  background-color: #f3e885;
-}
 
 /* ----- LAYOUT ----- */
 
@@ -94,7 +52,11 @@ footer {
 
 header, 
 .section-two {
-  background-color: #5f29a3;
+  background-color: #b0072f;
+}
+
+.introduction{
+  text-align: center;
 }
 
 .section-two {
@@ -105,27 +67,28 @@ header,
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.main-image {
+.div-description{
+  text-align: start;
+}
+
+img{
   width: 100%;
-  display: block;
-  max-width: 640px;
-  margin: 0 auto 2em;
+  box-shadow: 1px 1px 10px 1px;
 }
-
-.section-two-image-container {
+.flex-photos{
   display: flex;
 }
 
-.feature-image {
-  width: 100%;
-  border-radius: 4.6px;
+.flex-photos img{
+  width: 45%;
 }
 
 footer {
   text-align: center;
-  color: #5f29a3;
+  color: #b0072f;
 }
 
 /* ----- NAVIGATION ----- */
@@ -151,12 +114,16 @@ ul {
       text-align: center;
   }
 
+  .flex-photos{
+    justify-content: space-between;
+  }
+
   nav {
       margin-top: 1.5em;
   }
 
   li:not(:last-child) {
-      border-bottom: 1px dotted #a190b6;
+      border-bottom: 1px dotted #c25f76;
   }  
 }
 
@@ -167,23 +134,25 @@ ul {
       padding: 2.875em 0;        
   }
   
-  header .container,
-  nav ul {
+  header .header,
+  nav ul{
       display: flex;
   }
   
-  header .container {
+  .header{
+      width: 90%;
+      margin: 0 auto;
       justify-content: space-between;
       align-items: center;
   }
-  
-  nav li {
-      margin-left: 1.25em;
+
+  .flex-photos{
+    justify-content: space-around;
   }
   
-  .btn {
-      display: inline-block;
-      margin-right: 0.5em;
+
+  nav li {
+      margin-left: 1.25em;
   }
   
   h1 {
